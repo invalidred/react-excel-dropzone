@@ -13,8 +13,18 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.jsx$/, loader: 'babel?stage=0', exclude: /node_modules/ }
-    ]
+      { test: /.js$/, loader: 'babel?stage=0', exclude: /node_modules/ },
+      { test: /\.jsx$/, loader: 'babel?stage=0', exclude: /node_modules/ },
+      // SINCE XLSX library pre-dates npm, it is not very npm friendly.
+      // Thus requiring it through regular import will break the build. The work
+      // around was to use the script-loader to ignore the dependency checks
+      // THIS ONLY applies to the XLSX library.
+      {
+        test: /xlsx\.core\.min\.js$/,
+        include: /(node_modules|bower_components)/,
+        loader: 'script'
+      }
+    ],
   },
 
   output: {

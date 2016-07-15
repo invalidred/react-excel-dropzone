@@ -24,9 +24,6 @@
   ],
   "author": "Davi Ferreira <hi@daviferreira.com>",
   "license": "MIT",
-  "peerDependencies": {
-    "react": "^0.14.2"
-  },
   "devDependencies": {
     "babel": "5.8.29",
     "babel-core": "5.8.30",
@@ -36,11 +33,18 @@
     "mocha": "2.3.3",
     "react-addons-test-utils": "0.14.2",
     "react-dom": "0.14.2",
+    "script-loader": "0.7.0",
     "sinon": "1.17.1",
     "trash": "3.1.2",
     "unexpected": "10.0.2",
     "unexpected-sinon": "8.0.0",
     "webpack": "1.12.1",
     "webpack-dev-server": "1.10.1"
+  },
+  "dependencies": {
+    "react": "0.14.2",
+    "react-dom": "0.14.2",
+    "react-dropzone": "3.5.3",
+    "xlsx": "0.8.0"
   }
 }

@@ -1,5 +1,5 @@
 'use strict';
 
-import YourComponent from './YourComponent';
+import ExcelDropzone from './ExcelDropzone';
 
-export default YourComponent;
+export default ExcelDropzone;
